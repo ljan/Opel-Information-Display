@@ -9,11 +9,13 @@
 
 // This example code is in the public domain.
 
+#define TID 0x94
+#define MID 0x9B
 
 #include <Wire.h>
 
 void setup() {
-  Wire.begin(8);                // join i2c bus with address #8
+  Wire.begin(TID);                // join i2c bus with address #0x94 for TID
   Wire.onReceive(receiveEvent); // register event
   Serial.begin(9600);           // start serial for output
 }
